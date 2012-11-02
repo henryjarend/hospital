@@ -143,9 +143,9 @@ public class TreatmentRoom extends javax.swing.JFrame {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private static javax.swing.JLabel patientIDNo;
+    private javax.swing.JLabel patientIDNo;
     private javax.swing.JLabel patientIDNoLabel;
-    private static javax.swing.JLabel patientName;
+    private javax.swing.JLabel patientName;
     private javax.swing.JLabel patientNameLabel;
     private javax.swing.JLabel status;
     // End of variables declaration//GEN-END:variables

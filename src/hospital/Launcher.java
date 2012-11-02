@@ -20,6 +20,8 @@ public class Launcher extends javax.swing.JFrame {
     public Launcher() {
 //        String priorityString = JOptionPane.showInputDialog(null, "Please type a number of priorities", "Priority Number", JOptionPane.QUESTION_MESSAGE);
 //        priorityNumber = Integer.parseInt(priorityString);
+        roomOne.setTitle("Room One");
+        roomTwo.setTitle("Room Two");
         initComponents();
         initMisc();
     }
