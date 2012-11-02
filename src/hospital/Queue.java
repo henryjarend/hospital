@@ -3,7 +3,9 @@ package hospital;
 /**
  *
  * @author Henry Arend
- */
+ * @version November 11, 2012
+ * 
+ **/
 public class Queue {
     private Node head = null;
     private Node tail = null;
@@ -26,10 +28,6 @@ public class Queue {
         tail.nextNode = thisPatient;
         }
         tail = thisPatient;
-        
-        //TreatmentRoom room = new TreatmentRoom();
-        //room.setName(newPatient.getName());
-        //room.setID(newPatient.getID());
     }
     public Patient dequeue(){
         Patient temp = head.newbie;

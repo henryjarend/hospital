@@ -90,6 +90,7 @@ public class TreatmentRoom extends javax.swing.JFrame {
         }
         this.patient = patient;
         setOccupied(true);
+        isOccupied = true;
         setPatientName();
         setID();
     }

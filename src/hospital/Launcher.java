@@ -167,11 +167,17 @@ public class Launcher extends javax.swing.JFrame {
     
     public void takePatient(){
         try{
-        Patient temp = roomOne.removePatient();
-        JOptionPane.showMessageDialog(null, "Patient Name: " + temp.getName() + "Patient ID: " + temp.getID(),"", JOptionPane.OK_OPTION);
+            if(!roomOne.checkForEmptyRoom()){
+                 Patient temp = roomOne.removePatient();
+                 JOptionPane.showMessageDialog(null, "Patient Name: " + temp.getName() + "Patient ID: " + temp.getID(),"", JOptionPane.OK_OPTION);
+            }
+            else{
+                Patient temp = roomTwo.removePatient();
+                 JOptionPane.showMessageDialog(null, "Patient Name: " + temp.getName() + "Patient ID: " + temp.getID(),"", JOptionPane.OK_OPTION);
+            }
         }
         catch(NullPointerException e){
-           JOptionPane.showMessageDialog(null, "No patients in waiting room."); 
+           JOptionPane.showMessageDialog(null, "No patients in treatment rooms."); 
         }
     }
     

@@ -12,7 +12,7 @@ public class Admittance extends javax.swing.JFrame {
     String[] priorities;
     
     String hospitalIdentifier;
-    static int hospitalID = 0001;
+    static int hospitalID = 1;
     Launcher launcher;
     
 
@@ -188,17 +188,7 @@ public class Admittance extends javax.swing.JFrame {
     private void submitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitButtonMouseClicked
         Patient newbie = new Patient(name.getText(), SSN.getText(), DOB.getText(), Integer.toString(hospitalID),(String) prioritySelect.getSelectedItem());
         launcher.addPatient(newbie);
-//        if(launcher.checkEmptyRoom()){
-//            launcher.setPatientName(newbie.getName());
-//            launcher.setID(newbie.getID());
-//        }
-//        else{
-//            JOptionPane.showMessageDialog(null, newbie.getName() + "has been added to the waiting room.");
-//        }
         JOptionPane.showMessageDialog(null, "Patient has been entered.");
-//        name.setText("");
-//        SSN.setText("");
-//        DOB.setText("");
         hospitalID++;
         setVisible(false);
     }//GEN-LAST:event_submitButtonMouseClicked
@@ -207,41 +197,6 @@ public class Admittance extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_cancelButtonMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    /*
-    public static void main() {
-        /* Set the Nimbus look and feel 
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Admittance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Admittance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Admittance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Admittance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Admittance().setVisible(true);
-            }
-        });
-    }*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DOB;
     private javax.swing.JLabel PriorityLabel;
